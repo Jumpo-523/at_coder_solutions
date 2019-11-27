@@ -20,6 +20,24 @@ def slack_submitter_wrapper(func):
             raise e            
     return slack_submitter
 
+"""
+# If you use jupyter notebook, then you can use, 
+from IPython.core.magic import (register_line_magic, register_cell_magic,
+                                register_line_cell_magic)
+@register_cell_magic
+def cmagic(line, cell):
+    "my cell magic"
+    return line, cell
+
+%%cmagic  
+def cmagic(line, cell):
+    "my cell magic"
+    try:
+        exec(cell)
+    except Exception as e:
+        print(str(e))
+        "Be Supermarket"
+"""
 @slack_submitter_wrapper
 def divide(a, b):
     return a//b
