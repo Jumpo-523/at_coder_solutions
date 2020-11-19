@@ -5,7 +5,7 @@
 using namespace std;
 const long long INF = 1LL << 60;
 
-int main(){{
+int main(){
     // input
     int N;
     cin >> N;
@@ -25,4 +25,4 @@ int main(){{
     }
     cout << dp[N-1] << endl;
 
-}}
+}
